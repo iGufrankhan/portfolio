@@ -119,7 +119,7 @@ export default function About() {
           <div className="bg-white dark:bg-dark/50 p-6 rounded-xl shadow-md">
             <div className="flex items-start gap-4">
               <img 
-                src="/logos/edunet.png"
+                src="/projects/edunet.png"
                 alt="Edunet Foundation"
                 className="h-12 w-12 rounded-md object-contain"
               />
@@ -148,7 +148,7 @@ export default function About() {
           <div className="bg-white dark:bg-dark/50 p-6 rounded-xl shadow-md">
             <div className="flex items-start gap-4">
               <img 
-                src="/logos/cdac.png"
+                src="/projects/cdac.jpeg"
                 alt="CDAC Noida"
                 className="h-12 w-12 object-contain rounded-md"
               />

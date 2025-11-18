@@ -26,16 +26,17 @@ export default function Projects() {
             className="bg-white dark:bg-dark/50 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
           >
 
-            {/* Project Image */}
-            <div className="aspect-video w-full overflow-hidden bg-gray-200 dark:bg-gray-800">
-              <Image
-                src={project.image}
-                alt={project.title}
-                width={600}
-                height={300}
-                className="object-cover w-full h-full"
-              />
-            </div>
+           {/* Project Image */}
+<div className="aspect-video w-full overflow-hidden bg-gray-200 dark:bg-gray-800 flex items-center justify-center">
+  <Image
+    src={project.image}
+    alt={project.title}
+    width={600}
+    height={300}
+    className="object-contain w-full h-full p-2"
+  />
+</div>
+
 
             {/* Content */}
             <div className="p-6">

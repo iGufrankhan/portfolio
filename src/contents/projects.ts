@@ -16,7 +16,7 @@ export const projects: Project[] = [
     github: "https://github.com/iGufrankhan/Book_Recommender_System",
     demo: "https://book-recommender-system.vercel.app",
     date: "2025-04",
-    image: '/projects/books.png',
+    image: '/projects/book.png',
   },
 
 

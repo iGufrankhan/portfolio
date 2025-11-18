@@ -14,12 +14,14 @@ const Projects = () => {
           <article key={project.title}>
             <div className="border border-gray-300 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
               
-              {/* Image */}
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-48 object-cover rounded-md"
-              />
+            <div className="w-full h-56 overflow-hidden rounded-lg">
+  <img
+    src={project.image}
+    alt={project.title}
+    className="w-full h-full object-cover transition-all duration-300 hover:scale-105"
+  />
+</div>
+
 
               {/* Title */}
               <h3 className="mt-4 text-lg font-semibold">{project.title}</h3>

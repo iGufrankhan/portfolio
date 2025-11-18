@@ -3,11 +3,19 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { motion } from "framer-motion";
 import { FaYoutube } from "react-icons/fa";
+import { motion } from "framer-motion";
 
+// Competitive Programming Icons
+import {
+  SiLeetcode,
+  SiCodeforces,
+  SiCodechef,
+  SiGeeksforgeeks,
+} from "react-icons/si";
 
-import { fadeIn ,scaleIn,fadeInUp} from "@/utils/Animations";
+import { fadeIn, scaleIn, fadeInUp } from "@/utils/Animations";
+
 export default function Hero() {
   return (
     <section className="py-16">
@@ -22,17 +30,28 @@ export default function Hero() {
             variants={scaleIn}
             transition={{ delay: 0.2 }}
           >
-           <Image
-  src="/gufran.jpg"
-  alt="Profile"
-  width={160}
-  height={160}
-  className="rounded-full mb-6 w-60 h-60 object-cover 
-             ring-8 ring-primary/70 shadow-[0_0_25px_rgba(0,122,255,0.35)]
-             hover:scale-105 transition-transform duration-300"
-/>
-
+            <Image
+              src="/gufran.jpg"
+              alt="Profile"
+              width={160}
+              height={160}
+              className="rounded-full mb-6 w-60 h-60 object-cover 
+              ring-8 ring-primary/70 shadow-[0_0_25px_rgba(0,122,255,0.35)]
+              hover:scale-105 transition-transform duration-300"
+            />
           </motion.div>
+
+       <motion.div
+  className="text-primary font-semibold text-lg mb-6"
+  animate={{ opacity: [1, 0.3, 1], scale: [1, 1.05, 1] }}
+  transition={{
+    duration: 1.3,
+    repeat: Infinity,
+    repeatType: "loop",
+  }}
+>
+  📢 See my resume
+</motion.div>
 
           {/* Heading */}
           <motion.h1
@@ -62,30 +81,46 @@ export default function Hero() {
             variants={fadeInUp}
             transition={{ delay: 0.4 }}
           >
-          AI/ML Enthusiast | Backend Developer  | Competitive Programmer
-
+            AI/ML Enthusiast | Backend Developer | Competitive Programmer
           </motion.p>
 
-          {/* Social Icons */}
+          {/* ⭐ Social + CP Icons in ONE LINE */}
           <motion.div
-            className="flex justify-center space-x-4 mb-12"
+            className="flex justify-center space-x-6 mb-12 text-2xl"
             initial="initial"
             animate="animate"
             variants={fadeInUp}
             transition={{ delay: 0.5 }}
           >
-            <IconLink className="h-6 w-6" href="https://github.com">
+            {/* Social Icons */}
+            <IconLink href="https://github.com">
               <FaGithub />
             </IconLink>
 
             <IconLink href="https://linkedin.com">
-              <FaLinkedin className="h-6 w-6"/>
+              <FaLinkedin />
             </IconLink>
 
-           <IconLink href="https://youtube.com">
-  <FaYoutube />
-</IconLink>
+            <IconLink href="https://youtube.com">
+              <FaYoutube />
+            </IconLink>
 
+            {/* CP Icons */}
+            <IconLink href="https://leetcode.com/your-id">
+              <SiLeetcode />
+            </IconLink>
+
+            <IconLink href="https://codeforces.com/profile/your-id">
+              <SiCodeforces />
+            </IconLink>
+
+            <IconLink href="https://www.codechef.com/users/your-id">
+              <SiCodechef />
+            </IconLink>
+
+            <IconLink href="https://auth.geeksforgeeks.org/user/your-id">
+              <SiGeeksforgeeks />
+            </IconLink>
           </motion.div>
 
           {/* Buttons */}
